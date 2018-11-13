@@ -8,7 +8,7 @@ var reTrim = /^(\s|\u00A0)+|(\s|\u00A0)+$/g;
 
 var EventSource = function (url, options) {
   var eventsource = this,
-      interval = 10000, // polling interval
+      interval = 2000, // polling interval
       lastEventId = null,
       cache = '',
       eventType;
@@ -50,7 +50,7 @@ var EventSource = function (url, options) {
       if (lastEventId != null) xhr.setRequestHeader('Last-Event-ID', lastEventId);
       cache = '';
 
-      xhr.timeout = 10000;
+      xhr.timeout = 50000;
       xhr.onreadystatechange = function () {
         if (this.readyState == 3 || (this.readyState == 4 && this.status == 200)) {
           // on success
