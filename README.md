@@ -4,6 +4,10 @@ react-native event source
 Server-Sent Events for your React Native apps! Based on @remy's
 [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js).
 
+## Changes for FrontM
+
+Increased Polling Interval
+
 ## Installing
 
 Run the following command in your project's directory to grab the latest published version of this code:
