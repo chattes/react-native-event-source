@@ -8,7 +8,7 @@ var reTrim = /^(\s|\u00A0)+|(\s|\u00A0)+$/g;
 
 var EventSource = function (url, options) {
   var eventsource = this,
-      interval = 500, // polling interval
+      interval = 10000, // polling interval
       lastEventId = null,
       cache = '',
       eventType;
